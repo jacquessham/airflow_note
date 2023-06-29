@@ -20,7 +20,8 @@ docker-compose up airflow-init
 # Run the container
 docker-compose up
 ```
-
+<br><br>
+In case you don't want the example DAGs in your Airflow, you may indicate <b>False</b> under the <i>AIRFLOW__CORE__LOAD_EXAMPLES</i> column.
 
 ## Reference
 YouTuber <b>coder2j</b> - <a href="https://www.youtube.com/watch?v=K9AnJ9_ZAXE">Airflow Tutorial for Beginners - Full Course in 2 Hours 2022</a>

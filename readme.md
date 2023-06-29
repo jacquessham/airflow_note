@@ -1,8 +1,10 @@
 # Airflow Notes
 
 ## Setup
-See instruction in the [setup](/setup) folder. <br>
-Coming soon...
+See instruction in the [setup](/setup) folder.
+
+## Notes on the Basics
+You may find the basic syntax and DAG example scripts in the [Notes](/notes) folder.
 
 
 ## Reference
