@@ -13,7 +13,7 @@ with DAG(
 	dag_id='first_dag_v3',
 	description='This is the first DAG',
 	default_args = default_args,
-	start_date=datetime(2023,6,28,23,15),
+	start_date=datetime(2023,6,28),
 	schedule_interval='@daily'
 
 ) as dag:
