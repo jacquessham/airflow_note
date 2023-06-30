@@ -29,3 +29,8 @@ AIRFLOW_HOME = os.getenv('AIRFLOW_HOME')
 df = pd.read_csv(AIRFLOW_HOME+'/dags/salary.csv')
 ```
 
+### ex1_v1.py
+Coming Soon...
+
+### ex1_v2.py
+Coming Soon...
