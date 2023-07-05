@@ -7,9 +7,7 @@ See instruction in the [setup](/setup) folder.
 You may find the basic syntax and DAG example scripts in the [Notes on Basics](/notes) folder.
 
 ## Notes on Interaction with Databases
-You may find the notes on how to interact with databases with Airflow in the [Database Notes](/db_notes) folder.
-<br>
-Coming soon...
+You may find the notes on how to interact with databases with Airflow in the [Database Notes](/db_notes) folder. You may learn how to connect Airflow with Relational Databases, Flatfile Storage, or NoSQL databases.
 
 ## Exercises
 You may find the scripts on the exercises with Airflow in the [Exercise](/ex)
