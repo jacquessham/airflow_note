@@ -1,13 +1,16 @@
 import os
+import sys
 from datetime import datetime, timedelta
-import csv
-import pandas as pd
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from airflow.providers.postgres.operators.postgres import PostgresOperator
-from airflow.providers.postgres.hooks.postgres import PostgresHook
-from ex2.etl import *
 
+
+def get_curr_pwd():
+	return os.getenv('AIRFLOW_HOME')
+
+sys.path.insert(0,get_curr_pwd()+"/dags/ex2")
+from etl import *
 
 default_args = {
 	'owner': 'Jacques Sham',
@@ -15,17 +18,18 @@ default_args = {
 	'retry_delay': timedelta(minutes=5)
 }
 
+sql_query_dir = 'ex2/create_salarytable.sql'
 
 with DAG(
 	default_args=default_args,
-	dag_id='ex1_v1',
+	dag_id='ex2_v1',
 	start_date=datetime(2023,7,1),
 	schedule_interval='0 4 * * Mon-Fri'
 	) as dag:
 	task1 = PostgresOperator(
 		task_id='create_table',
 		postgres_conn_id='postgres_airflow_docker',
-		sql=get_pwd()+'/ex2/create_salarytable.sql'
+		sql=sql_query_dir
 		)
 	task2 = PythonOperator(
 		task_id='etl',
