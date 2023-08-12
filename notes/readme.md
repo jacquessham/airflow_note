@@ -94,7 +94,7 @@ If you have multiple downstream or upstream tasks you may use an array to list i
 <br><br>
 By default, DAG is set catchup to be True. It means if you set the a backdated starting date, DAG will automatically run the tasks between the interval of the starting date and today. You may set it to be False, and backfill manually on command line (See the video in the Reference Section).
 <br>
-Under schedule interval, we are using Airflow reserved word for interval, you may replaced it with cron expression, such as <b>0 4 * * Tue-Fri</b>.
+Under schedule interval, we are using Airflow reserved word for interval, you may replaced it with cron expression, such as <b>0 4 * * Tue-Fri</b>. <b>If you do not wish to have the tasks be triggered periodically, set <i>schedule_interval=None</i></b>
 
 ## Python Operator
 Instead of Bash command, you may utilize Python Operator to perform Python functions within a DAG. In the Operator argument, simply replace BashCommand to PythonCommand along a defined functions to be called in the command, like below:

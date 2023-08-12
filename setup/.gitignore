@@ -1,0 +1,5 @@
+# All DAGs and dataset
+*.py
+*.csv
+*.json
+*.sql

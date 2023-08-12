@@ -10,6 +10,7 @@ def declare_conn():
     psql_hook = PostgresHook(postgres_conn_id='postgres_airflow_docker')
     conn = psql_hook.get_conn()
     cursor = conn.cursor()
+    conn.autocommit = True
     return conn, cursor
 
 def close_conn(conn):
